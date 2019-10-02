@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-provider
+eureka:
+  client:
+    enabled: false
+---
+spring:
+  profiles: nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+server:
+  port: 8070

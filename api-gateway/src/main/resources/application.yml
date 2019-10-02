@@ -1,6 +1,13 @@
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: after_route
+        uri: https://example.org
+        predicates:
+          - After=2019-09-10T15:14:47.789-07:00[America/Denver]
 server:
   port: 1101
 eureka:
